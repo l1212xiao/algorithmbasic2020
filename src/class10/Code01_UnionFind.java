@@ -29,6 +29,7 @@ public class Code01_UnionFind {
 		}
 
 		// 从点cur开始，一直往上找，找到不能再往上的代表点，返回
+		// 直接连最上的节点, 使得链扁平化,调用频繁，使得每次O(1)
 		public Node<V> findFather(Node<V> cur) {
 			Stack<Node<V>> path = new Stack<>();
 			while (cur != parents.get(cur)) {
@@ -55,6 +56,7 @@ public class Code01_UnionFind {
 			}
 			Node<V> aHead = findFather(nodes.get(a));
 			Node<V> bHead = findFather(nodes.get(b));
+			// 小挂大
 			if (aHead != bHead) {
 				int aSetSize = sizeMap.get(aHead);
 				int bSetSize = sizeMap.get(bHead);

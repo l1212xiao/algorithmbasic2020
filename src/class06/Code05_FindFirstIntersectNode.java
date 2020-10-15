@@ -71,6 +71,7 @@ public class Code05_FindFirstIntersectNode {
 		// n  :  链表1长度减去链表2长度的值
 		cur1 = n > 0 ? head1 : head2; // 谁长，谁的头变成cur1
 		cur2 = cur1 == head1 ? head2 : head1; // 谁短，谁的头变成cur2
+
 		n = Math.abs(n);
 		while (n != 0) {
 			n--;

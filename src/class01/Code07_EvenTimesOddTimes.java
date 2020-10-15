@@ -42,20 +42,14 @@ public class Code07_EvenTimesOddTimes {
 		//   000000010000     1
 		
 		//   011011000000
-		// 
-		
-		
-		
+		//
 		while(N != 0) {
 			int rightOne = N & ((~N) + 1);
 			count++;
 			N ^= rightOne;
 			// N -= rightOne
 		}
-		
-		
 		return count;
-		
 	}
 	
 	

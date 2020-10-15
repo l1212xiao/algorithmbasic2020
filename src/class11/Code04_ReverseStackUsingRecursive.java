@@ -13,6 +13,7 @@ public class Code04_ReverseStackUsingRecursive {
 		stack.push(i);
 	}
 
+	// 想办法拿到最后一个数
 	public static int f(Stack<Integer> stack) {
 		int result = stack.pop();
 		if (stack.isEmpty()) {

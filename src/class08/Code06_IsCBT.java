@@ -2,6 +2,7 @@ package class08;
 
 import java.util.LinkedList;
 
+// 判断是否为完全二叉树
 public class Code06_IsCBT {
 
 	public static class Node {
@@ -30,8 +31,9 @@ public class Code06_IsCBT {
 			r = head.right;
 			if (
 			// 如果遇到了不双全的节点之后，又发现当前节点不是叶节点
-			(leaf && (l != null || r != null)) || (l == null && r != null)
-
+			(leaf && (l != null || r != null)) // 前一个是叶子节点,后面一定是叶子节点,否则为false
+					||
+					(l == null && r != null) //有右无左,直接false
 			) {
 				return false;
 			}

@@ -1,6 +1,7 @@
 package class08;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Code03_IsBST {
 
@@ -28,7 +29,7 @@ public class Code03_IsBST {
 		return true;
 	}
 
-	public static void in(Node head, ArrayList<Node> arr) {
+	public static void in(Node head, List<Node> arr) {
 		if (head == null) {
 			return;
 		}

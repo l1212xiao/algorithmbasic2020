@@ -3,6 +3,7 @@ package class09;
 import java.util.Arrays;
 import java.util.Comparator;
 
+// 返回可以安排会议的最多数量
 public class Code04_BestArrange {
 
 	public static class Program {
@@ -69,12 +70,10 @@ public class Code04_BestArrange {
 	}
 
 	public static class ProgramComparator implements Comparator<Program> {
-
 		@Override
 		public int compare(Program o1, Program o2) {
 			return o1.end - o2.end;
 		}
-
 	}
 
 	// for test

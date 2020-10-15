@@ -151,14 +151,14 @@ public class Code04_MaxSubBSTSize {
 		
 		if(
 				// 左树整体需要是搜索二叉树
-				(  leftInfo == null ? true : leftInfo.isAllBST    )
+				(  leftInfo == null ? true : leftInfo.isAllBST    ) 	// 左树是搜索二叉树
 				&&
-				(  rightInfo == null ? true : rightInfo.isAllBST    )
+				(  rightInfo == null ? true : rightInfo.isAllBST    )	// 右树是搜索二叉树
 				&&
 				// 左树最大值<x
-				(leftInfo == null ? true : leftInfo.max < X.value)
+				(leftInfo == null ? true : leftInfo.max < X.value)		// 左树最大值<x
 				&&
-				(rightInfo == null ? true : rightInfo.min > X.value)
+				(rightInfo == null ? true : rightInfo.min > X.value)	// 右树最小值>x
 				
 				
 				) {

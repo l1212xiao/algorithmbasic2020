@@ -13,6 +13,7 @@ public class Code07_SuccessorNode {
 		}
 	}
 
+	// 返回该节点的后继节点
 	public static Node getSuccessorNode(Node node) {
 		if (node == null) {
 			return node;
@@ -21,6 +22,7 @@ public class Code07_SuccessorNode {
 			return getLeftMost(node.right);
 		} else { // 无右子树
 			Node parent = node.parent;
+			// while (parent != null && parent.left != node)
 			while (parent != null && parent.right == node) { // 当前节点是其父亲节点右孩子
 				node = parent;
 				parent = node.parent;

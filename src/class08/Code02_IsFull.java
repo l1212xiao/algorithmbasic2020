@@ -1,5 +1,6 @@
 package class08;
 
+//判断二叉树是否为完全二叉树
 public class Code02_IsFull {
 
 	public static class Node {
@@ -21,6 +22,7 @@ public class Code02_IsFull {
 		return (1 << height) - 1 == nodes;
 	}
 
+	// 算高度
 	public static int h(Node head) {
 		if (head == null) {
 			return 0;
@@ -28,6 +30,7 @@ public class Code02_IsFull {
 		return Math.max(h(head.left), h(head.right)) + 1;
 	}
 
+	// 计数
 	public static int n(Node head) {
 		if (head == null) {
 			return 0;

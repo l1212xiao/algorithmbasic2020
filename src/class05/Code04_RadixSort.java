@@ -25,6 +25,8 @@ public class Code04_RadixSort {
 		return res;
 	}
 
+	// 基数排序
+	// 要求被排序数为非负整数
 	// arr[l..r]排序  ,  digit
 	// l..r    3 56 17 100    3
 	public static void radixSort(int[] arr, int L, int R, int digit) {
@@ -57,9 +59,6 @@ public class Code04_RadixSort {
 				arr[i] = help[j];
 			}
 		}
-		
-		
-		
 		
 	}
 

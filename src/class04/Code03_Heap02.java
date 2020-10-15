@@ -242,14 +242,7 @@ public class Code03_Heap02 {
 		System.out.println("test finish");
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
+
 
 	}
 

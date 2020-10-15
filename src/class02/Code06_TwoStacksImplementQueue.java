@@ -15,7 +15,9 @@ public class Code06_TwoStacksImplementQueue {
 
 		// push栈向pop栈倒入数据
 		private void pushToPop() {
+			// 原则1:保证pop栈为空
 			if (stackPop.empty()) {
+				// 一次性把push倒完
 				while (!stackPush.empty()) {
 					stackPop.push(stackPush.pop());
 				}

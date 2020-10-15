@@ -8,9 +8,9 @@ public class Code01_SelectionSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
-		// 0 ~ N-1
-		// 1~n-1
-		// 2
+		// 0 ~ n-1
+		// 1 ~ n-1
+		// 2 ~ n-1
 		for (int i = 0; i < arr.length - 1; i++) { // i ~ N-1
 			// 最小值在哪个位置上  i～n-1
 			int minIndex = i;

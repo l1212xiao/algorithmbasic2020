@@ -1,5 +1,15 @@
 package class12;
 
+/**
+ * 题目一
+ * 假设有排成一行的N个位置，记为1~N, N-定大于或等于2
+ * 开始时机器人在其中的M位置上(M - -定是1~N中的一个)
+ * 如果机器人来到1位置，那么下一步只能往右来到2位置;
+ * 如果机器人来到N位置，那么下一步只能往左来到N-1位置;
+ * 如果机器人来到中间位置，那么下一步可以往左走或者往右走;
+ * 规定机器人必须走K步，最终能来到P位置(P也是1 ~N中的一一个)的方法有多少种
+ * 给定四个参数N、M、K、P，返回方法数。
+ */
 public class Code01_RobotWalk {
 
 	public static int ways1(int N, int M, int K, int P) {
@@ -39,18 +49,18 @@ public class Code01_RobotWalk {
 		// 走向左、走向右是截然不同的方法，所以总方法数要都算上
 		return walk(N, cur + 1, rest - 1, P) + walk(N, cur - 1, rest - 1, P);
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	public static int waysCache(int N, int M, int K, int P) {
 		// 参数无效直接返回0
 		if (N < 2 || K < 1 || M < 1 || M > N || P < 1 || P > N) {
 			return 0;
 		}
-		
+
 		int[][] dp = new int[N+1][K+1];
 		for(int row = 0; row <= N; row++) {
 			for(int col = 0; col <= K; col++) {
@@ -78,19 +88,19 @@ public class Code01_RobotWalk {
 			dp[cur][rest] =walkCache(N, N - 1, rest - 1, P,dp);
 			return dp[cur][rest];
 		}
-		dp[cur][rest] = walkCache(N, cur + 1, rest - 1, P,dp) 
+		dp[cur][rest] = walkCache(N, cur + 1, rest - 1, P,dp)
 				+ walkCache(N, cur - 1, rest - 1, P, dp);
 		return dp[cur][rest];
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
 
 	public static int ways2(int N, int M, int K, int P) {
 		// 参数无效直接返回0

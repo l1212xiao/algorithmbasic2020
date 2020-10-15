@@ -16,7 +16,6 @@ public class Code03_TopologySort {
 		// 剩余入度为0的点，才能进这个队列
 		Queue<Node> zeroInQueue = new LinkedList<>();
 		
-		
 		for (Node node : graph.nodes.values()) {
 			inMap.put(node, node.in);
 			if (node.in == 0) {

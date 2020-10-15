@@ -73,9 +73,9 @@ public class Code06_TreeMaxWidth {
 			}
 			curLevelNodes++;
 			if (cur == curEnd) {
-				max = Math.max(max, curLevelNodes);
-				curLevelNodes = 0;
-				curEnd = nextEnd;
+				max = Math.max(max, curLevelNodes);	// 结算
+				curLevelNodes = 0;	// 清零
+				curEnd = nextEnd;	// 向下一层移动
 			}
 		}
 		return max;

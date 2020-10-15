@@ -41,6 +41,7 @@ public class Code05_GetMinStack {
 		}
 	}
 
+	// 最小栈和数栈同级
 	public static class MyStack2 {
 		private Stack<Integer> stackData;
 		private Stack<Integer> stackMin;
